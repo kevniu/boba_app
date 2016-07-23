@@ -1,0 +1,2 @@
+class BobasController < ApplicationController
+end
