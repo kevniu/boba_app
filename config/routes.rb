@@ -54,4 +54,6 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root 'bobas#index'
+
+  get '/yelptest', to: 'bobas#search'
 end

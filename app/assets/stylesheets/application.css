@@ -15,3 +15,24 @@
  */
  @import "bootstrap";
  @import "bootstrap-sprockets";
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: black;
+  border: solid 1px red;
+  color: white;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
+#map {
+  display: none;
+}
+
+#addresses {
+  display: none;
+}
