@@ -55,5 +55,6 @@ Rails.application.routes.draw do
   #   end
   root 'bobas#index'
 
-  get '/yelptest', to: 'bobas#search'
+  get '/yelptest' => 'bobas#search'
+  post '/getlocation' => 'bobas#get_location'
 end

@@ -1,24 +1,31 @@
-// $(document).ready(function(){
-//   $("#flip").click(function(){
-//     $("#panel").slideToggle("slow");
-//   });
-//
-//   $("#boba-near").click(function(){
-//     $("#map").fadeIn("slow");
-//     $("#addresses").fadeIn(2000);
-//   });
-//
-//
-//
-// });
-
 $(document).ready(function(){
+
+  function getLocation() {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
+  function showPosition(position) {
+    console.log(position)
+    $.ajax({
+      type: "POST",
+      url: "http://localhost:3000/getlocation",
+      data: {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+      },
+      dataType: 'json'
+    });
+  }
+
+  getLocation();
+
   $("#boba-near").on('click', function(e){
     e.preventDefault();
     $.ajax({
       type: "GET",
       url: "http://localhost:3000/yelptest",
       success: function(data){
+
         var locations = [];
         var appendStr =
           "<table class='table'><thead><tr><th>Name</th><th>Rating</th><th>Address</th><th>Phone #</th></tr>";
@@ -32,14 +39,9 @@ $(document).ready(function(){
 
           locations.push([data.businesses[i].name, data.businesses[i].location.coordinate.latitude, data.businesses[i].location.coordinate.longitude])
         }
-        // appendStr += "</tr>";
-
-         console.log(appendStr)
 
         $("#addresses").html(appendStr);
         $("#addresses").fadeIn("slow");
-        // var mapScript ='<script>var map;function initMap() {map = new google.maps.Map(document.getElementById(\'map\'), {center: {lat: -34.397, lng: 150.644},zoom: 8});}</script><script async defersrc=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Podi0-zST8mYSdTCzlwVxDu_6xVAeR8&callback=initMap\"></script>';
-        // $('body').append(mapScript);
 
         var centerCoordinate = data.region.center;
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -65,9 +67,7 @@ $(document).ready(function(){
             }
           })(marker, i));
         }
-
         $('#map').fadeIn("slow");
-
       }
     });
   });
