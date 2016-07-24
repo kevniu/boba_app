@@ -2,7 +2,7 @@ require 'yelp'
 
 class BobasController < ApplicationController
   def search
-    parameters = { category_filter: 'bubbletea', limit: 16 }
+    parameters = { category_filter: 'bubbletea', limit: 5 }
     render json: Yelp.client.search('cll', parameters)
   end
 
@@ -10,4 +10,5 @@ class BobasController < ApplicationController
   #   parameters = { term: 'bubbletea', limit: 16 }
   #   render json: Yelp.client.search('cll', parameters)
   # end
+
 end
