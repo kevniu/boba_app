@@ -57,4 +57,8 @@ Rails.application.routes.draw do
 
   get '/yelptest' => 'bobas#search'
   post '/getlocation' => 'bobas#get_location'
+
+  # get '/yelplocation' => 'bobas#search_location'
+  post '/address' => 'bobas#get_address'
+
 end
