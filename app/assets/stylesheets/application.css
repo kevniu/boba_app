@@ -19,13 +19,11 @@
 #panel, #flip {
   padding: 5px;
   text-align: center;
-  background-color: black;
   border: solid 1px red;
-  color: white;
 }
 
 #panel {
-  padding: 50px;
+  padding: 25px;
   display: none;
 }
 

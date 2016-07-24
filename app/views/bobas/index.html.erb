@@ -8,9 +8,6 @@
 
 <div class="container text-center">
   <div id="map">
-    <!-- <div id="map-container">
-      <div id="map-canvas"></div>
-    </div> -->
   </div>
 </div>
 
@@ -27,5 +24,8 @@
   Find Boba by Location
 </div>
 <div id="panel">
-  Form Here
+  <form name="ajaxform" id="ajaxform" action="/address" method="POST">
+    <input type="text" name="location"><br><br>
+    <input type="submit" id="submitButton" name="submitButton" value="Submit">
+  </form>
 </div>
