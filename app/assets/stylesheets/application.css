@@ -35,23 +35,13 @@
   margin-right: auto;
 }
 
+
 #addresses {
   display: none;
 }
 
 .address-table {
-  border: solid 1px black;
 }
-
 body {
   background-color: #ECB3FF;
 }
-
-/*#map-canvas { margin: 0 auto 0 auto; }*/
-
-/*#map-canvas {
-  height: 70%;
-  width :50%;
-  margin-left:auto;
-  margin-right:auto;
-}*/
