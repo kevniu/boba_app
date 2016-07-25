@@ -1,9 +1,9 @@
 <div class="container text-center">
-  <img src="/assets/Milktea.jpg">
+  <img src="/assets/MilkTea.png">
 </div>
 
 <div id="image" class="container text-center">
-  <img id="image" style="width:300px; height:533px" src="/assets/boba.gif" />
+  <img id="image" style="width:250px; height:450px" src="/assets/boba.gif" />
 </div>
 
 <div class="container text-center map-container">
@@ -18,12 +18,15 @@
 <br>
 
 <div id="boba-near" class="text-center">
-  <button class="btn-default">Find Boba Locations Near Me</button>
+  <button class="btn btn-primary">Boba Locations Near Me</button>
 </div>
+<br>
+<div class="text-center">
+<button class="btn btn-primary" id="flip" class="text-center">
+  Boba Locations Near Address
+</button>
+<div id="boba-near" class="text-center">
 
-<div id="flip" class="text-center">
-  Find Boba by Location
-</div>
 <div id="panel">
   <form name="ajaxform" id="ajaxform" action="/address" method="POST">
     <input type="text" name="location"><br><br>
