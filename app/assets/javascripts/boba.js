@@ -24,7 +24,7 @@ $(document).ready(function(){
     e.preventDefault();
     $.ajax({
       type: "GET",
-      url: "https://geoboba.herokuapp.com/yelptests",
+      url: "https://geoboba.herokuapp.com/yelptest",
       // url: "http://localhost:3000/yelptest",
       success: function(data){
 
