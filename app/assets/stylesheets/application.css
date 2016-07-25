@@ -19,7 +19,7 @@
 #panel, #flip {
   padding: 5px;
   text-align: center;
-  border: solid 1px red;
+  /*border: solid 1px red;*/
 }
 
 #panel {
@@ -36,19 +36,11 @@
   margin-right: auto;
 }
 
+
 #addresses {
   display: none;
 }
 
 .address-table {
-  border: solid 1px black;
+
 }
-
-/*#map-canvas { margin: 0 auto 0 auto; }*/
-
-/*#map-canvas {
-  height: 70%;
-  width :50%;
-  margin-left:auto;
-  margin-right:auto;
-}*/
