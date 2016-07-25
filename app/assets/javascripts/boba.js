@@ -8,8 +8,8 @@ $(document).ready(function(){
     centerCoordinate = position.coords;
     $.ajax({
       type: "POST",
-      // url: "https://geoboba.herokuapp.com/getlocation",
-      url: "http://localhost:3000/getlocation",
+      url: "https://geoboba.herokuapp.com/getlocation",
+      // url: "http://localhost:3000/getlocation",
       data: {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude
