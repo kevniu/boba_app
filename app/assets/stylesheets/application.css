@@ -19,7 +19,6 @@
 #panel, #flip {
   padding: 5px;
   text-align: center;
-  /*border: solid 1px red;*/
 }
 
 #panel {
@@ -42,5 +41,7 @@
 }
 
 .address-table {
-
+}
+body {
+  background-color: #ECB3FF;
 }
