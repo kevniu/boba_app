@@ -8,7 +8,8 @@ $(document).ready(function(){
     console.log(position)
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/getlocation",
+      url: "https://geoboba.herokuapp.com/getlocation",
+      // url: "http://localhost:3000/getlocation",
       data: {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude
@@ -23,7 +24,8 @@ $(document).ready(function(){
     e.preventDefault();
     $.ajax({
       type: "GET",
-      url: "http://localhost:3000/yelptest",
+      url: "https://geoboba.herokuapp.com/yelptests",
+      // url: "http://localhost:3000/yelptest",
       success: function(data){
 
         var locations = [];
@@ -91,7 +93,8 @@ $("#ajaxform").submit(function(e){
   console.log(postData);
   $.ajax({
     type: "POST",
-    url: "http://localhost:3000/address",
+    url: "https://geoboba.herokuapp.com/address",
+    // url: "http://localhost:3000/address",
     data: postData,
     success: function(data){
       var locations = [];
