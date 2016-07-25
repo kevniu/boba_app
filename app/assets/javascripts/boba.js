@@ -39,9 +39,10 @@ $(document).ready(function(){
 
           locations.push([data.businesses[i].name, data.businesses[i].location.coordinate.latitude, data.businesses[i].location.coordinate.longitude])
         }
-
+        $("#image").hide();
         $("#addresses").html(appendStr);
         $("#addresses").fadeIn("slow");
+        $("#map-container").show();
 
         var centerCoordinate = data.region.center;
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -106,9 +107,10 @@ $("#ajaxform").submit(function(e){
 
         locations.push([data.businesses[i].name, data.businesses[i].location.coordinate.latitude, data.businesses[i].location.coordinate.longitude])
       }
-
+      $("#image").hide();
       $("#addresses").html(appendStr);
       $("#addresses").fadeIn("slow");
+      $("#map-container").show();
 
       var centerCoordinate = data.region.center;
       var map = new google.maps.Map(document.getElementById('map'), {
